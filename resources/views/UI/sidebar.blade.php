@@ -45,6 +45,14 @@
                         <span class="hide-menu">Nasabah</span>
                     </a>
                 </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ route('pinjaman') }}" aria-expanded="false">
+                        <span>
+                            <i class="fa-solid fa-wallet"></i>
+                        </span>
+                        <span class="hide-menu">Pinjaman</span>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- End Sidebar navigation -->

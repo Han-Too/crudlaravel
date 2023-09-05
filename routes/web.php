@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\NasabahController;
+use App\Http\Controllers\PinjamanController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -45,7 +46,12 @@ Route::middleware(['isLogin'])->group(function () {
     Route::post('/updatenasabah', [NasabahController::class,'update'])->name('updatenasabah');
     Route::get('/deletenasabah/{id}', [NasabahController::class,'destroy'])->name('deletenasabah');
     
-    
+    Route::get('/pinjaman', [PinjamanController::class,'index'])->name('pinjaman');
+    Route::get('/showaddpinjaman', [PinjamanController::class,'create'])->name('showaddpinjaman');
+    Route::post('/storepinjaman', [PinjamanController::class,'store'])->name('storepinjaman');
+    Route::get('/showeditpinjaman/{id}', [PinjamanController::class,'edit'])->name('showeditpinjaman');
+    Route::post('/updatepinjaman', [PinjamanController::class,'update'])->name('updatepinjaman');
+    Route::get('/deletepinjaman/{id}', [PinjamanController::class,'destroy'])->name('deletepinjaman');
     
     
     Route::get('/userindex', [UserController::class, 'userindex'])->name('userindex');
