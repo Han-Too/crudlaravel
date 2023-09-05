@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BarangController;
+use App\Http\Controllers\NasabahController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +37,14 @@ Route::middleware(['isLogin'])->group(function () {
     Route::get('/showupdate/{id}', [UserController::class, 'showupdate'])->name('showupdate');
     Route::post('/updateuser', [UserController::class, 'updateuser'])->name('updateuser');
     Route::get('/deleteuser/{id}', [UserController::class, 'deleteuser'])->name('deleteuser');
+
+    Route::get('/nasabah', [NasabahController::class,'index'])->name('nasabah');
+    Route::get('/showaddnasabah', [NasabahController::class,'create'])->name('showaddnasabah');
+    Route::post('/storenasabah', [NasabahController::class,'store'])->name('storenasabah');
+    Route::get('/showeditnasabah/{id}', [NasabahController::class,'edit'])->name('showeditnasabah');
+    Route::post('/updatenasabah', [NasabahController::class,'update'])->name('updatenasabah');
+    Route::get('/deletenasabah/{id}', [NasabahController::class,'destroy'])->name('deletenasabah');
+    
     
     
     

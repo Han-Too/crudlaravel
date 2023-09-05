@@ -1,5 +1,5 @@
-<header class="app-header">
-    <nav class="navbar navbar-expand-lg navbar-light">
+<header class="app-header top-0 border border-primary">
+    <nav class="navbar navbar-expand-lg navbar-light shadow-lg">
         <ul class="navbar-nav">
             <li class="nav-item d-block d-xl-none">
                 <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse"
@@ -8,7 +8,7 @@
                 </a>
             </li>
         </ul>
-        <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+        <div class="navbar-collapse justify-content-end  px-0" id="navbarNav">
             <span class="fs-8 fw-bolder">
                 Admin Dashboard
             </span>

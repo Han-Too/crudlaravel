@@ -1,5 +1,5 @@
 <!-- Sidebar Start -->
-<aside class="left-sidebar">
+<aside class="left-sidebar border border-primary">
     <!-- Sidebar scroll-->
     <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
@@ -35,6 +35,14 @@
                             <i class="fa-solid fa-user"></i>
                         </span>
                         <span class="hide-menu">User</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ route('nasabah') }}" aria-expanded="false">
+                        <span>
+                            <i class="fa-solid fa-clipboard-user"></i>
+                        </span>
+                        <span class="hide-menu">Nasabah</span>
                     </a>
                 </li>
             </ul>

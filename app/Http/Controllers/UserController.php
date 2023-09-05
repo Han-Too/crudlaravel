@@ -64,10 +64,10 @@ class UserController extends Controller
         echo "<script>alert('Berhasil Update Akun')</script>";
         return redirect('useradmin');
     }
-    public function login(Request $request)
+    public function login()
     {
-        $cek = User::where('email', $request->email)->first();
-        $password = Hash::check($request->password, $cek->password);
+        $cek = User::where('email', request('email'))->first();
+        $password = Hash::check(request('password'), $cek->password);
         // dd($password);
 
         if (empty($cek)) {
@@ -76,11 +76,11 @@ class UserController extends Controller
         } else {
             if ($cek->role == '1') {
 
-                $request->session()->put('login', 'login');
+                session()->put('login', 'login');
                 echo "<script>alert('Berhasil Login')</script>";
                 return redirect('adminindex');
             } else {
-                $request->session()->put('login', 'login');
+                session()->put('login', 'login');
                 echo "<script>alert('Berhasil Login')</script>";
                 return redirect('userindex');
             }
